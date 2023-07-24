@@ -1,0 +1,12 @@
+{
+    "name": "duadsal/php-poo",
+    "description": "Curse about POO",
+    "autoload": {
+        "psr-4": {
+            "Duadsal\\PhpPoo\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    }
+}
