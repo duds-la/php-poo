@@ -9,11 +9,30 @@ namespace Duadsal\PhpPoo;
 class PessoaFisica
 {
     //aqui fica as propriedades e métodos
-    public string $name    = "Eduardo" ;
-    public string $email   = "EduardoTeste@teste.com" ;
-    public string $phone   = "59 999999999" ;
-    public string $cpf     = "01301301212" ;
-    public int    $age     = 20;
+    public string $name;
+    public string $email;
+    public string $phone;
+    public string $cpf;
+    public int    $age;
+
+
+    public function __construct(
+        string $name,
+        string $email,
+        string $phone,
+        string $cpf,
+        int $age
+        
+    )
+    {
+        $this->name = $name;    
+        $this->email = $email;    
+        $this->phone = $phone;    
+        $this->cpf = $cpf;    
+        $this->age = $age;    
+    }
+
+    
 }
 
 
