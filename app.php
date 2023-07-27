@@ -10,4 +10,4 @@ $pessoaFisica = new PessoaFisica("Eduardo", "teste@teste","55999999999","1231231
 
 
 
-dump($pessoaFisica);
+dump($pessoaFisica::getInformation());

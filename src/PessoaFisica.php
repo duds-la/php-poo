@@ -8,8 +8,10 @@ namespace Duadsal\PhpPoo;
 //objetos do tipo:
 class PessoaFisica
 {
+
+    const OBJECT_TYPE = 'Humano';
     //aqui fica as propriedades e métodos
-    public string $name;
+    public static string $name;
     public string $email;
     public string $phone;
     public string $cpf;
@@ -25,13 +27,18 @@ class PessoaFisica
         
     )
     {
-        $this->name = $name;    
+        self::$name = $name;    
         $this->email = $email;    
         $this->phone = $phone;    
         $this->cpf = $cpf;    
         $this->age = $age;    
     }
 
+    public static function getInformation( string $name): string
+    {
+        self::$name=$name;
+        return self::$name . " - " . self::OBJECT_TYPE; 
+    }
     
 }
 
