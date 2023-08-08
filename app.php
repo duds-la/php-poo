@@ -6,8 +6,11 @@ require __DIR__.'/vendor/autoload.php';
 use Duadsal\PhpPoo\PessoaFisica;
 
 
-$pessoaFisica = new PessoaFisica("Eduardo", "teste@teste","55999999999","12312312312",20);
+$eduardo = new PessoaFisica;
+
+$eduardo->name ="eduardo";
+$eduardo->age= 20;
+$eduardo->cpf="123";
 
 
-
-dump($pessoaFisica::getInformation());
+dump($eduardo->getCpf());

@@ -6,40 +6,34 @@ namespace Duadsal\PhpPoo;
 
 //Pense em uma classe como uma forma, que vai nos possibilitar criar diversos
 //objetos do tipo:
-class PessoaFisica
+class PessoaFisica extends Pessoa implements PessoaFisicaInterface
 {
 
     const OBJECT_TYPE = 'Humano';
     //aqui fica as propriedades e métodos
-    public static string $name;
-    public string $email;
-    public string $phone;
+    public string $name;
     public string $cpf;
     public int    $age;
 
+    public function getCpf(): string
+    {
+        return $this->cpf;   
+    }
+   
 
-    public function __construct(
-        string $name,
-        string $email,
-        string $phone,
-        string $cpf,
-        int $age
+
+    // public function __construct(
+    //     string $name,
+    //     string $cpf,
+    //     int $age
         
-    )
-    {
-        self::$name = $name;    
-        $this->email = $email;    
-        $this->phone = $phone;    
-        $this->cpf = $cpf;    
-        $this->age = $age;    
-    }
+    // )
+    // {
+    //     $this->$name = $name;     
+    //     $this->cpf = $cpf;    
+    //     $this->age = $age;    
+    // }
 
-    public static function getInformation( string $name): string
-    {
-        self::$name=$name;
-        return self::$name . " - " . self::OBJECT_TYPE; 
-    }
-    
 }
 
 
